@@ -1,86 +1,402 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel HOUNKPATI - Ingénieur Qualité</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel HOUNKPATI, Ingénieur Qualité</title>
+  <meta name="description" content="Portfolio de Daniel HOUNKPATI, Ingénieur Qualité industrielle. Responsable Qualité, audits, normes ISO, amélioration continue.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== SECTION 1 : HERO ===== -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Daniel HOUNKPATI</h1>
-      <h2>Ingénieur Qualité Aéronautique</h2>
-      <p class="hero-tagline">
-        Conformité produit, maîtrise des processus et résolution de problèmes :
-        la rigueur qualité au service d'un secteur exigeant.
-      </p>
-      <a href="#contact" class="cta-button">Me contacter</a>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand">D<span>.</span>HOUNKPATI</a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#experiences">Expériences</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="cv.html" class="nav-cv">&#9660; Télécharger CV</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
     </div>
   </header>
 
-  <!-- ===== SECTION 2 : PERSONNALITÉ ===== -->
-  <section id="personnalite" class="section">
-    <h2 class="section-title">Ma Personnalité</h2>
-    <div class="personality-content">
-      <p>
-        Rigoureux, analytique et orienté solution. J'aime aller à la racine des problèmes 
-        et collaborer avec les équipes sur le terrain pour instaurer une culture d'amélioration 
-        continue. Maîtriser la qualité, c'est avant tout un travail d'équipe et d'écoute !
-      </p>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <!-- Industrial background elements -->
+    <div class="hero-grid"></div>
+    <div class="hero-scanline"></div>
+    <div class="hero-gear hero-gear-1">
+      <svg viewBox="0 0 100 100"><path d="M50 10a2 2 0 0 1 2 2v6.1a30 30 0 0 1 11.3 4.7l4.3-4.3a2 2 0 0 1 2.8 0l5.7 5.7a2 2 0 0 1 0 2.8l-4.3 4.3A30 30 0 0 1 76.5 42H82.6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6.1a30 30 0 0 1-4.7 11.3l4.3 4.3a2 2 0 0 1 0 2.8l-5.7 5.7a2 2 0 0 1-2.8 0l-4.3-4.3A30 30 0 0 1 52 78.5V84.6a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-6.1a30 30 0 0 1-11.3-4.7l-4.3 4.3a2 2 0 0 1-2.8 0l-5.7-5.7a2 2 0 0 1 0-2.8l4.3-4.3A30 30 0 0 1 15.5 52H9.4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h6.1a30 30 0 0 1 4.7-11.3l-4.3-4.3a2 2 0 0 1 0-2.8l5.7-5.7a2 2 0 0 1 2.8 0l4.3 4.3A30 30 0 0 1 40 18.1V12a2 2 0 0 1 2-2h8zM46 30a16 16 0 1 0 0 32 16 16 0 0 0 0-32z"/></svg>
     </div>
-  </section>
-
-  <!-- ===== SECTION 3 : COMPÉTENCES & OUTILS ===== -->
-  <section class="section" style="background-color: var(--blanc);">
-    <h2 class="section-title">Compétences Clés & Outils</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>Méthodes Qualité</h3>
-        <p>8D, PDCA, Ishikawa, Pareto, 5S, AMDEC</p>
-      </div>
-      <div class="skill-category">
-        <h3>Normes</h3>
-        <p>ISO 9001, ISO 14001, Outils SARI</p>
-      </div>
-      <div class="skill-category">
-        <h3>Outils & Logiciels</h3>
-        <p>SEIRICH, R-studio, Instruments de mesure (Keyence)</p>
-      </div>
+    <div class="hero-gear hero-gear-2">
+      <svg viewBox="0 0 100 100"><path d="M50 10a2 2 0 0 1 2 2v6.1a30 30 0 0 1 11.3 4.7l4.3-4.3a2 2 0 0 1 2.8 0l5.7 5.7a2 2 0 0 1 0 2.8l-4.3 4.3A30 30 0 0 1 76.5 42H82.6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6.1a30 30 0 0 1-4.7 11.3l4.3 4.3a2 2 0 0 1 0 2.8l-5.7 5.7a2 2 0 0 1-2.8 0l-4.3-4.3A30 30 0 0 1 52 78.5V84.6a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-6.1a30 30 0 0 1-11.3-4.7l-4.3 4.3a2 2 0 0 1-2.8 0l-5.7-5.7a2 2 0 0 1 0-2.8l4.3-4.3A30 30 0 0 1 15.5 52H9.4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h6.1a30 30 0 0 1 4.7-11.3l-4.3-4.3a2 2 0 0 1 0-2.8l5.7-5.7a2 2 0 0 1 2.8 0l4.3 4.3A30 30 0 0 1 40 18.1V12a2 2 0 0 1 2-2h8zM46 30a16 16 0 1 0 0 32 16 16 0 0 0 0-32z"/></svg>
     </div>
-  </section>
-
-  <!-- ===== SECTION 4 : MES 3 POINTS FORTS ===== -->
-  <section class="section">
-    <h2 class="section-title">Ce que je vous apporte</h2>
-    <div class="strengths-grid">
-      <div class="strength-card">
-        <div class="icon">🔍</div>
-        <h3>Analyse pointue</h3>
-        <p>Expertise dans l'analyse des causes racines pour éradiquer définitivement les non-conformités.</p>
-      </div>
-      <div class="strength-card">
-        <div class="icon">🤝</div>
-        <h3>Travail d'équipe</h3>
-        <p>Facilité à communiquer avec la production et les clients pour garantir la conformité des produits.</p>
-      </div>
-      <div class="strength-card">
-        <div class="icon">📈</div>
-        <h3>Performance</h3>
-        <p>Mise en place d'indicateurs pertinents pour réduire les coûts de non-qualité.</p>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Disponible
+          </div>
+          <h1>Daniel<br>HOUNKPATI</h1>
+          <p class="hero-title">Ingénieur Qualité</p>
+          <p class="hero-tagline">
+            Responsable Qualité en mécatronique, spécialisé dans le pilotage
+            d'indicateurs, les audits terrain et la résolution de non-conformités.
+            De la ligne de production au système de management, je construis
+            la qualité là où elle compte.
+          </p>
+          <div class="hero-ctas">
+            <a href="#experiences" class="btn btn-primary">Voir mes expériences</a>
+            <a href="#contact" class="btn btn-outline">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <span>Photo</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer id="contact" class="footer">
-    <h2>Contactez-moi</h2>
-    <p>Prêt à collaborer pour améliorer la qualité de vos produits ?</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/daniel-hounkpati/" target="_blank">🔗 Profil LinkedIn - Daniel HOUNKPATI</a>
+  <!-- ═══ 01/ EXPÉRIENCES ═══ -->
+  <section class="section" id="experiences">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">01/</span>
+        <div>
+          <h2 class="section-title">Expériences professionnelles</h2>
+          <p class="section-subtitle">3 postes en qualité industrielle, de l'opérationnel au management.</p>
+        </div>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Card 1 — Metalis -->
+        <div class="exp-card">
+          <div class="exp-card-top">
+            <span class="exp-badge exp-badge-emploi">CDI</span>
+            <span class="exp-dates">Fév. 2026 – Aujourd'hui</span>
+          </div>
+          <h3>Responsable Qualité UP Mécatronique</h3>
+          <div class="exp-card-company-row">
+            <div class="company-logo">
+              <img src="logos/metalis.svg" alt="Metalis" onerror="this.parentElement.innerHTML='<span class=company-logo-text>METALIS</span>'">
+            </div>
+            <p class="company" style="margin-bottom:0">Metalis, Marchaux-Chaudefontaine</p>
+          </div>
+          <p>
+            Pilotage des indicateurs qualité, audits lignes de production,
+            animation Top 5, lecture de plans et approbation modifications
+            produit/process. Pouvoir d'arrêt production.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">MSP/CSP</span>
+            <span class="tag">Audits terrain</span>
+            <span class="tag">Plans de contrôle</span>
+            <span class="tag">Pareto</span>
+          </div>
+          <a href="experiences.html#metalis" class="exp-link">Dossier technique</a>
+        </div>
+
+        <!-- Card 2 — ARRIVE / Flowbird -->
+        <div class="exp-card">
+          <div class="exp-card-top">
+            <span class="exp-badge exp-badge-emploi">Alternance</span>
+            <span class="exp-dates">Sept. 2024 – Sept. 2025</span>
+          </div>
+          <h3>Ingénieur Qualité</h3>
+          <div class="exp-card-company-row">
+            <div class="company-logo">
+              <img src="logos/arrive.svg" alt="ARRIVE" onerror="this.parentElement.innerHTML='<span class=company-logo-text>ARRIVE</span>'">
+            </div>
+            <p class="company" style="margin-bottom:0">ARRIVE (ex Flowbird-EasyPark), Besançon</p>
+          </div>
+          <p>
+            Suivi qualité produits finis et semi-finis, AMDEC Produit/Process,
+            gestion des non-conformités (8D, PDCA, Ishikawa), maintien des
+            certifications ISO 9001 et ISO 14001.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">AMDEC</span>
+            <span class="tag">8D</span>
+            <span class="tag">ISO 9001</span>
+            <span class="tag">ISO 14001</span>
+          </div>
+          <a href="experiences.html#arrive" class="exp-link">Dossier technique</a>
+        </div>
+
+        <!-- Card 3 — STI Genlis -->
+        <div class="exp-card">
+          <div class="exp-card-top">
+            <span class="exp-badge exp-badge-emploi">Stage</span>
+            <span class="exp-dates">Avr. 2024 – Août 2024</span>
+          </div>
+          <h3>Ingénieur QSE</h3>
+          <div class="exp-card-company-row">
+            <div class="company-logo">
+              <img src="logos/sti.svg" alt="STI" onerror="this.parentElement.innerHTML='<span class=company-logo-text>STI</span>'">
+            </div>
+            <p class="company" style="margin-bottom:0">Sous Traitance Industrielle (STI), Genlis</p>
+          </div>
+          <p>
+            Renouvellement certification ISO 9001, traitement réclamations,
+            déploiement 5S, formation des équipes aux bonnes pratiques qualité.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">ISO 9001</span>
+            <span class="tag">5S</span>
+            <span class="tag">Amélioration continue</span>
+          </div>
+          <a href="experiences.html#sti" class="exp-link">Dossier technique</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02/ COMPÉTENCES ═══ -->
+  <section class="section section-alt" id="competences">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">02/</span>
+        <div>
+          <h2 class="section-title">Compétences clés</h2>
+          <p class="section-subtitle">Méthodes, normes et outils maîtrisés au fil des missions.</p>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <h3><span class="icon">&#9635;</span> Qualité produit &amp; process</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Conformité</span>
+            <span class="skill-pill">Traçabilité</span>
+            <span class="skill-pill">Maîtrise des risques</span>
+            <span class="skill-pill">Plans de contrôle</span>
+            <span class="skill-pill">Lecture de plans</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><span class="icon">&#9881;</span> Méthodes</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">AMDEC / FMEA</span>
+            <span class="skill-pill">MSP / CSP</span>
+            <span class="skill-pill">Capabilité</span>
+            <span class="skill-pill">R&amp;R</span>
+            <span class="skill-pill">8D</span>
+            <span class="skill-pill">PDCA</span>
+            <span class="skill-pill">Ishikawa</span>
+            <span class="skill-pill">Pareto</span>
+            <span class="skill-pill">5S</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><span class="icon">&#9745;</span> Normes</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">ISO 9001</span>
+            <span class="skill-pill">ISO 14001</span>
+            <span class="skill-pill">ISO 45001</span>
+            <span class="skill-pill">ISO 50001</span>
+            <span class="skill-pill">ISO 17025</span>
+            <span class="skill-pill">HACCP</span>
+            <span class="skill-pill">MASE</span>
+            <span class="skill-pill">VDA 6.3</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><span class="icon">&#128269;</span> Audits</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Audits terrain</span>
+            <span class="skill-pill">Audits produits/process</span>
+            <span class="skill-pill">ISO 19011</span>
+            <span class="skill-pill">Audits internes</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><span class="icon">&#128295;</span> Outils</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">SEIRICH</span>
+            <span class="skill-pill">R-Studio</span>
+            <span class="skill-pill">Pack Office</span>
+            <span class="skill-pill">Keyence (2D vision)</span>
+            <span class="skill-pill">Mesure 3D vision</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><span class="icon">&#127760;</span> Langues</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Français (natif)</span>
+            <span class="skill-pill">Anglais (B2)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03/ CHIFFRES CLÉS ═══ -->
+  <section class="section" id="chiffres">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">03/</span>
+        <h2 class="section-title">En quelques chiffres</h2>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-value">3<span>+</span></div>
+          <div class="stat-label">Années d'expérience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Entreprises accompagnées</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">6<span>+</span></div>
+          <div class="stat-label">Normes ISO maîtrisées</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">&#10003;</div>
+          <div class="stat-label">Auditeur certifié ISO 19011</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04/ PHILOSOPHIE ═══ -->
+  <section class="section section-alt" id="philosophie">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">04/</span>
+        <h2 class="section-title">Ma philosophie</h2>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philo-card">
+          <div class="philo-num">01</div>
+          <h3>Aller à la racine</h3>
+          <p>Ne pas traiter les symptômes, mais identifier les causes profondes. Un problème bien compris est un problème à moitié résolu.</p>
+        </div>
+        <div class="philo-card">
+          <div class="philo-num">02</div>
+          <h3>Le terrain d'abord</h3>
+          <p>La qualité se construit sur les lignes de production, pas dans les bureaux. Le contact quotidien avec les opérateurs est essentiel.</p>
+        </div>
+        <div class="philo-card">
+          <div class="philo-num">03</div>
+          <h3>Former pour pérenniser</h3>
+          <p>Transmettre les bonnes pratiques pour une amélioration durable. L'autonomie des équipes est le meilleur indicateur de succès.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05/ CV ═══ -->
+  <section class="section" id="cv">
+    <div class="container">
+      <div class="cv-section">
+        <div>
+          <h3>Télécharger mon CV</h3>
+          <p>Retrouvez l'ensemble de mon parcours, compétences et certifications au format PDF.</p>
+        </div>
+        <div class="cv-actions">
+          <a href="cv.html" class="btn btn-primary">&#9660; CV Qualité (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 06/ CONTACT ═══ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">06/</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">&#9993;</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">
+            <a href="mailto:dhounkpati4@gmail.com">dhounkpati4@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#9742;</div>
+          <div class="contact-label">Téléphone</div>
+          <div class="contact-value">
+            <a href="tel:+33758836298">07 58 83 62 98</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#127968;</div>
+          <div class="contact-label">Localisation</div>
+          <div class="contact-value">Besançon, France</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#128279;</div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">
+            <a href="https://www.linkedin.com/in/daniel-hounkpati-b08389212/" target="_blank" rel="noopener noreferrer">Daniel HOUNKPATI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FLOATING BAR ═══ -->
+  <div class="floating-bar" id="floating-bar">
+    <a href="#experiences">Expériences</a>
+    <a href="#competences">Compétences</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">D<span>.</span>HOUNKPATI</div>
+          <p class="footer-desc">
+            Ingénieur Qualité industrielle. Passionné par l'amélioration continue
+            et la résolution de problèmes sur le terrain.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#experiences">Expériences</a>
+          <a href="#competences">Compétences</a>
+          <a href="a-propos.html">À propos</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="experiences.html">Dossiers techniques</a>
+          <a href="a-propos.html">Parcours</a>
+          <a href="a-propos.html#certifications">Certifications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Liens</h4>
+          <a href="https://www.linkedin.com/in/daniel-hounkpati-b08389212/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:dhounkpati4@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Daniel HOUNKPATI. Tous droits réservés.</span>
+        <span>Permis B &middot; Véhicule personnel</span>
+      </div>
     </div>
   </footer>
 

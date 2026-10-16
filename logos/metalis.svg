@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="8" fill="#1a2744"/>
+  <text x="60" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="18" fill="#fff" letter-spacing="1">METALIS</text>
+  <rect x="20" y="64" width="80" height="2" rx="1" fill="#B8860B"/>
+  <text x="60" y="82" text-anchor="middle" font-family="Arial,sans-serif" font-weight="400" font-size="9" fill="#8899aa" letter-spacing="2">INDUSTRIE</text>
+</svg>

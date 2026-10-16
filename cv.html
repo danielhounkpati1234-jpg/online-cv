@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Daniel HOUNKPATI, Ingénieur Qualité</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0A1628;
+      --teal: #2A6478;
+      --amber: #B8860B;
+      --text: #374151;
+      --text-light: #6B7280;
+      --border: #E5E7EB;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      line-height: 1.55;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .cv-page {
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 24px 32px;
+    }
+
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 3px solid var(--navy);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .cv-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -.02em;
+      line-height: 1.1;
+    }
+    .cv-title {
+      font-size: .9rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .cv-contact {
+      text-align: right;
+      font-size: .72rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .cv-contact a { color: var(--teal); text-decoration: none; }
+    .cv-contact strong { color: var(--text); }
+
+    .cv-section { margin-bottom: 10px; }
+    .cv-section-title {
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--amber);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+    }
+
+    .cv-exp { margin-bottom: 9px; }
+    .cv-exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .cv-exp-role {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .cv-exp-dates {
+      font-size: .7rem;
+      color: var(--text-light);
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+    .cv-exp-company {
+      font-size: .75rem;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .cv-exp ul {
+      padding-left: 16px;
+      font-size: .73rem;
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .cv-exp li { margin-bottom: 1px; }
+
+    .cv-edu { margin-bottom: 6px; }
+    .cv-edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .cv-edu-title {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .cv-edu-dates {
+      font-size: .7rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .cv-edu-school {
+      font-size: .73rem;
+      color: var(--teal);
+      font-weight: 500;
+    }
+    .cv-edu-desc {
+      font-size: .71rem;
+      color: var(--text-light);
+    }
+
+    .cv-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 20px;
+    }
+    .cv-skill-row { font-size: .73rem; }
+    .cv-skill-label { font-weight: 600; color: var(--navy); }
+    .cv-skill-value { color: var(--text); }
+
+    .cv-certs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 20px;
+      font-size: .71rem;
+    }
+    .cv-cert {
+      padding-left: 12px;
+      position: relative;
+      color: var(--text);
+    }
+    .cv-cert::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 6px;
+      width: 4px; height: 4px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .cv-langs {
+      display: flex;
+      gap: 28px;
+      font-size: .73rem;
+    }
+    .cv-lang strong { color: var(--navy); }
+
+    .cv-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+      margin-top: 12px;
+      font-size: .65rem;
+      color: var(--text-light);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .print-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: var(--navy);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      z-index: 100;
+      font-size: .88rem;
+    }
+    .print-bar button {
+      background: var(--amber);
+      color: var(--navy);
+      border: none;
+      padding: 8px 24px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: .85rem;
+      cursor: pointer;
+    }
+    .print-bar button:hover { background: #D4A017; }
+    .print-bar a {
+      color: rgba(255,255,255,.7);
+      text-decoration: none;
+      font-size: .82rem;
+    }
+    .print-bar a:hover { color: #fff; }
+    body { padding-top: 52px; }
+
+    @media print {
+      body { padding-top: 0; line-height: 1.4; }
+      .print-bar { display: none; }
+      .cv-page { padding: 10mm 14mm; max-width: none; }
+      @page { size: A4; margin: 0; }
+      .cv-header { padding-bottom: 8px; margin-bottom: 10px; }
+      .cv-section { margin-bottom: 8px; }
+      .cv-exp { margin-bottom: 7px; }
+      .cv-exp ul { line-height: 1.35; }
+      .cv-footer { margin-top: 8px; padding-top: 6px; }
+      .cv-name { font-size: 1.4rem; }
+      p { font-size: .75rem !important; line-height: 1.45 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <span>Ctrl + P (ou Cmd + P) pour sauvegarder en PDF</span>
+    <button onclick="window.print()">Imprimer / PDF</button>
+    <a href="index.html">&larr; Retour au portfolio</a>
+  </div>
+
+  <div class="cv-page">
+
+    <div class="cv-header">
+      <div>
+        <div class="cv-name">Daniel HOUNKPATI</div>
+        <div class="cv-title">Ingénieur Qualité</div>
+      </div>
+      <div class="cv-contact">
+        <a href="https://www.linkedin.com/in/daniel-hounkpati-b08389212/">LinkedIn</a><br>
+        <strong>07 58 83 62 98</strong><br>
+        <a href="mailto:dhounkpati4@gmail.com">dhounkpati4@gmail.com</a><br>
+        Besançon, France &middot; Permis B, véhicule personnel
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Profil</div>
+      <p style="font-size:.82rem;line-height:1.6">
+        Ingénieur Qualité avec 3 ans d'expérience en environnement industriel (mécatronique, électronique, sous-traitance).
+        Responsable Qualité en poste, habitué à piloter des indicateurs terrain, mener des audits process
+        et résoudre des non-conformités en 8D. Certifié auditeur ISO 19011. Maîtrise des référentiels ISO 9001, 14001, 45001 et VDA 6.3.
+      </p>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Expériences professionnelles</div>
+
+      <div class="cv-exp">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Responsable Qualité UP Mécatronique</span>
+          <span class="cv-exp-dates">Fév. 2026 – Aujourd'hui</span>
+        </div>
+        <div class="cv-exp-company">Metalis, Marchaux-Chaudefontaine (CDI)</div>
+        <ul>
+          <li>Piloter les indicateurs qualité (retours clients, coûts de non-qualité, réclamations)</li>
+          <li>Réaliser des audits sur les lignes de production, identifier et éradiquer les NC par analyse Pareto</li>
+          <li>Animer les réunions Top 5 et mettre à jour les plans de contrôle</li>
+          <li>Lire et interpréter les plans industriels, valider les modifications produit/process avec le client</li>
+          <li>Vérifier la conformité et la stabilité des processus par MSP, CSP et études R&amp;R</li>
+          <li>Assurer le respect des exigences qualité sur le terrain, avec pouvoir d'arrêt production</li>
+        </ul>
+      </div>
+
+      <div class="cv-exp">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Ingénieur Qualité</span>
+          <span class="cv-exp-dates">Sept. 2024 – Sept. 2025</span>
+        </div>
+        <div class="cv-exp-company">ARRIVE (ex Flowbird / EasyPark), Besançon (Alternance M2)</div>
+        <ul>
+          <li>Suivre la qualité des produits finis et semi-finis, vérifier la conformité aux spécifications clients</li>
+          <li>Rédiger les plans de contrôle et d'essais, participer aux revues de conception</li>
+          <li>Conduire des AMDEC Produit et Process</li>
+          <li>Traiter les non-conformités internes et clients par 8D, PDCA et diagramme d'Ishikawa</li>
+          <li>Suivre les indicateurs de capabilité, taux de rebuts et retours clients</li>
+          <li>Contribuer au maintien des certifications ISO 9001 et ISO 14001</li>
+        </ul>
+      </div>
+
+      <div class="cv-exp">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Ingénieur QSE</span>
+          <span class="cv-exp-dates">Avr. 2024 – Août 2024</span>
+        </div>
+        <div class="cv-exp-company">Sous Traitance Industrielle (STI), Genlis (Stage M1)</div>
+        <ul>
+          <li>Accompagner le renouvellement de la certification ISO 9001</li>
+          <li>Remettre en conformité le système qualité et traiter les réclamations clients</li>
+          <li>Déployer la démarche 5S en atelier et former les opérateurs</li>
+          <li>Mettre en place des outils de pilotage qualité produit pour l'amélioration continue</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Formation</div>
+
+      <div class="cv-edu">
+        <div class="cv-edu-header">
+          <span class="cv-edu-title">Master 1 &amp; 2 QESIS</span>
+          <span class="cv-edu-dates">2023 – 2025</span>
+        </div>
+        <div class="cv-edu-school">Université de Bourgogne Europe, Dijon</div>
+        <div class="cv-edu-desc">Qualité, Environnement, Sécurité dans les Industries et dans les Services. Normes : ICPE, ISO 9001, 14001, 45001, 50001, 17025, HACCP, MASE, RSE.</div>
+      </div>
+
+      <div class="cv-edu">
+        <div class="cv-edu-header">
+          <span class="cv-edu-title">Licence Biologie Biochimie Moléculaire</span>
+          <span class="cv-edu-dates">2020 – 2023</span>
+        </div>
+        <div class="cv-edu-school">Université de Bourgogne Franche-Comté, Dijon</div>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Compétences</div>
+      <div class="cv-skills-grid">
+        <div class="cv-skill-row">
+          <span class="cv-skill-label">Qualité : </span>
+          <span class="cv-skill-value">Conformité, Traçabilité, Plans de contrôle, Lecture de plans, Maîtrise des risques</span>
+        </div>
+        <div class="cv-skill-row">
+          <span class="cv-skill-label">Méthodes : </span>
+          <span class="cv-skill-value">AMDEC/FMEA, MSP/CSP, 8D, PDCA, Ishikawa, Pareto, 5S, R&amp;R, Capabilité</span>
+        </div>
+        <div class="cv-skill-row">
+          <span class="cv-skill-label">Normes : </span>
+          <span class="cv-skill-value">ISO 9001, 14001, 45001, 50001, 17025, HACCP, MASE, VDA 6.3</span>
+        </div>
+        <div class="cv-skill-row">
+          <span class="cv-skill-label">Outils : </span>
+          <span class="cv-skill-value">SEIRICH, R-Studio, Pack Office, Keyence (mesure 2D vision), Instruments de mesure 3D vision</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Certifications et formations complémentaires</div>
+      <div class="cv-certs">
+        <div class="cv-cert">Auditeur interne ISO 19011</div>
+        <div class="cv-cert">Formation VDA 6.3</div>
+        <div class="cv-cert">SST (Sauveteur Secouriste du Travail)</div>
+        <div class="cv-cert">AMDEC AIAG</div>
+        <div class="cv-cert">Formation incendie</div>
+        <div class="cv-cert">FMEA et audit interne</div>
+        <div class="cv-cert">PSSM (Premiers Secours Santé Mentale)</div>
+        <div class="cv-cert">Propreté particulaire</div>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <div class="cv-section-title">Langues</div>
+      <div class="cv-langs">
+        <div><strong>Français</strong> : langue maternelle</div>
+        <div><strong>Anglais</strong> : B2</div>
+      </div>
+    </div>
+
+    <div class="cv-footer">
+      <span>Daniel HOUNKPATI, Ingénieur Qualité</span>
+      <span>dhounkpati4@gmail.com &middot; 07 58 83 62 98</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
